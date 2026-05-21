@@ -1,0 +1,29 @@
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 1.4rem;
+}
+.nav-list li {
+  font-size: 1.8rem;
+  margin: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.incart {
+  border-radius: 50%;
+  background-color: brown;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+}

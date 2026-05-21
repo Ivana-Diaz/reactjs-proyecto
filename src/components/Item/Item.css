@@ -1,0 +1,31 @@
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: bisque;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 18rem;
+  height: 18rem;
+}
+
+.tarjeta:hover {
+  transform: scale(1.04);
+  background-color: darksalmon;
+}
+
+.imagen {
+  width: 12rem;
+  height: 12rem;
+  margin: 0.4rem;
+  border-radius: 0.6rem;
+}
+
+.nombre {
+  font-size: 1.2rem;
+}
+
+.precio {
+  font-size: 1rem;
+}

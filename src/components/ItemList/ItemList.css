@@ -1,0 +1,17 @@
+.container-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.tarjeta-link {
+  text-decoration: none;
+  color: black;
+}
+
+.mensaje {
+  margin: 2rem;
+  font-size: 1.4rem;
+}

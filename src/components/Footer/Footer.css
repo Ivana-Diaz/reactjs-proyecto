@@ -1,0 +1,17 @@
+footer {
+  background-color: darkgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0.6rem;
+}
+
+footer p {
+  margin: 1rem;
+}
+
+footer .nav-list li {
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
