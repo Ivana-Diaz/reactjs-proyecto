@@ -8,7 +8,7 @@ export const CartItem = ({ id, name, price, image }) => {
       <img src={image} alt={`foto de ${name}`} className="imagen-carrito"/>
       <h2 className="nombre-carrito">{name}</h2>
       <p className="precio-carrito">${price}</p>
-      <button onClick={() => removeItem(id)}>Eliminar</button>
+      <button className="boton-eliminar" onClick={() => removeItem(id)}>Eliminar</button>
     </article>
   )
 };

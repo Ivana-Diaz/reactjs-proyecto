@@ -8,18 +8,18 @@ export const CartView = () => {
   const { cart } = useCart();
 
   return (
-    <section>
+    <section className="seccion-carrito">
       <h1>Tu carrito de compras</h1>
 
       {cart.length ? (
-        <>
+        <div className="contenedor-carrito">
           {<CartList />}
           {<CartSummary />}
-        </>
+        </div>
       ) : (
         <>
-          <p>El carrito está vacío.</p>
-          <Link to={"/"}>
+          <p className="carrito-vacio">El carrito está vacío.</p>
+          <Link to={"/"} className="link-volver">
             Volver
           </Link>
         </>

@@ -8,9 +8,7 @@ export const CartList = () => {
 
   return (
     <>
-      <div>
-        {cart.map(element => <CartItem key={element.id} {...element} />)}
-      </div>
+      {cart.map(element => <CartItem key={element.id} {...element} />)}
     </>
   );
 };

@@ -1,4 +1,93 @@
+.seccion-carrito{
+  margin-bottom: 4rem;
+}
+
+.contenedor-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.tarjeta-carrito {
+  display: flex;
+  width: 40rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: bisque;
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+
 .imagen-carrito {
-  width: 10rem;
-  height: 10rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.nombre-carrito {
+  width: 12rem;
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.precio-carrito {
+  width: 8rem;
+  text-align: center;
+}
+
+.boton-eliminar {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: floralwhite;
+  font-family: Outfit, sans-serif;
+  font-size: 1rem;
+  width: 5rem;
+}
+
+.boton-eliminar:hover {
+  background-color: darksalmon;
+}
+
+.resumen {
+  display: flex;
+  width: 40rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: bisque;
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+
+.resumen p {
+  width: 20rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.precio-total{
+  width: 8rem;
+}
+
+.boton-finalizar {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: floralwhite;
+  font-family: Outfit, sans-serif;
+  font-size: 1rem;
+  width: 5rem;
+}
+
+.link-volver {
+  text-decoration: none;
+  color: brown;
+  margin: 2rem;
+  display: inline-block;
+  font-size: 1.4rem;
 }
