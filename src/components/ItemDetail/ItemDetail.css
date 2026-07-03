@@ -16,6 +16,11 @@
   border-radius: 0.6rem;
 }
 
+.categoria-detail {
+  font-variant: small-caps;
+  font-size: 1.2rem;
+}
+
 .info-detail {
   display: flex;
   flex-direction: column;
