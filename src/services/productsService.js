@@ -3,24 +3,6 @@ import { db } from "../firebase/config";
 
 const productsRef = collection(db, "products");
 
-/*
-export const getProducts = async () => {
-  try {
-    const snapshot = await getDocs(productsRef);
-
-    const productsFormat = snapshot.docs.map(doc => {
-      return { id: doc.id, ...doc.data() };
-    });
-
-    return productsFormat;
-
-  } catch (err) {
-    console.log("Error al traer los productos: ", err);
-    return [];
-  };
-};
-*/
-
 export const getByCategory = async (category) => {
   try {
     let queryRef;
@@ -40,7 +22,7 @@ export const getByCategory = async (category) => {
     return productsFormat;
 
   } catch (err) {
-    console.log("Error al filtrar productos: ", err);
+    console.error("Error al filtrar productos: ", err);
     return [];
   };
 };
@@ -59,7 +41,19 @@ export const getProductById = async (id) => {
     };
 
   } catch (err) {
-    console.log("Error al traer producto por ID: ", err);
+    console.error("Error al traer producto por ID: ", err);
     return null;
+  };
+};
+
+export const createProduct = async (productData) => {
+  try {
+    const docRef = await addDoc(productsRef, productData);
+
+    return docRef.id;
+
+  } catch (err) {
+    console.error("Error al crear el producto: ", err);
+    throw err;
   };
 };
