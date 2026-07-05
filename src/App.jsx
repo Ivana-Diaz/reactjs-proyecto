@@ -1,27 +1,33 @@
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartView } from "./components/Cart/CartView";
 import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer";
 import { ProductSuccess } from "./components/adminComponents/ProductSuccess";
+import { PublicLayout } from "./layouts/PublicLayout";
+import { AdminLayout } from "./layouts/AdminLayout";
+import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
+import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
+import { Login } from "./components/Login/Login";
 
 function App() {
   return (
     <>
-      <Header />
-      <main>
-        <Routes>
+      <Routes>
+        <Route element={<PublicLayout />}>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:category" element={<ItemListContainer />}/>
           <Route path="/product/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<CartView />} />
-          <Route path="/admin" element={<ProductFormContainer />} />
-          <Route path="/success/:id" element={<ProductSuccess />} />
-        </Routes>
-      </main>
-      <Footer />
+        </Route>
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Navigate to={"dashboard"} />} />
+          <Route path="dashboard" element={<Dashboard />}/>
+          <Route path="products/new" element={<ProductFormContainer />} />
+          <Route path="products/success/:id" element={<ProductSuccess />} />
+        </Route>
+      </Routes>
     </>
   );
 };
