@@ -21,9 +21,9 @@ function App() {
           <Route path="/carrito" element={<CartView />} />
         </Route>
         <Route path="/admin/login" element={<Login />} />
-        <Route path="/admin" element={<AdminLayout />}>
+        <Route path="/admin" element={<ProtectedRoute><AdminLayout /></ProtectedRoute>}>
           <Route index element={<Navigate to={"dashboard"} />} />
-          <Route path="dashboard" element={<Dashboard />}/>
+          <Route path="dashboard" element={<Dashboard />}/> {/*si saco el dashboard, aca redirige al products/new */}
           <Route path="products/new" element={<ProductFormContainer />} />
           <Route path="products/success/:id" element={<ProductSuccess />} />
         </Route>
