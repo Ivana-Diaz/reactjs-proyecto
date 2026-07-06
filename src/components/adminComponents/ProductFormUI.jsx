@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+
 export const ProductFormUI = ({
   product,
   errors,
@@ -6,9 +9,21 @@ export const ProductFormUI = ({
   onFileChange,
   onSubmit,
 }) => {
+  const { logout } = useAuth();
+
   return (
-    <section>
-      <form className="product-form" onSubmit={onSubmit}>
+    <div className="form-container">
+      
+      <div className="botones-acciones">
+        <Link className="boton-volver" to="/">
+          Volver a la tienda
+        </Link>
+        <button className="boton-logout" onClick={logout}>
+          Cerrar sesión
+        </button>
+      </div>
+
+      <form className="form-producto" onSubmit={onSubmit}>
         <h2>Agregar nuevo producto</h2>
 
         <div>
@@ -19,8 +34,8 @@ export const ProductFormUI = ({
             value={product.name}
             onChange={onChange}
           />
-          {errors.name && <p className="error">{errors.name}</p>}
         </div>
+        {errors.name && <p className="error">{errors.name}</p>}
 
         <div>
           <label>Precio:</label>
@@ -31,8 +46,8 @@ export const ProductFormUI = ({
             onChange={onChange}
             min="0"
           />
-          {errors.price && <p className="error">{errors.price}</p>}
         </div>
+        {errors.price && <p className="error">{errors.price}</p>}
 
         <div>
           <label>Categoría:</label>
@@ -42,8 +57,8 @@ export const ProductFormUI = ({
             value={product.category}
             onChange={onChange}
           />
-          {errors.category && <p className="error">{errors.category}</p>}
         </div>
+        {errors.category && <p className="error">{errors.category}</p>}
 
         <div>
           <label>Descripción:</label>
@@ -52,21 +67,21 @@ export const ProductFormUI = ({
             value={product.description}
             onChange={onChange}
           />
-          {errors.description && <p className="error">{errors.description}</p>}
         </div>
+        {errors.description && <p className="error">{errors.description}</p>}
 
         <div>
           <label>Imagen:</label>
           <input type="file" accept="image/*" onChange={onFileChange} />
-          {errors.file && <p className="error">{errors.file}</p>}
         </div>
+        {errors.file && <p className="error">{errors.file}</p>}
 
-        <button className="btn" type="submit" disabled={loading}>
+        <button className="boton-agregar" type="submit" disabled={loading}>
           {loading ? "Guardando..." : "Guardar"}
         </button>
 
         {errors.general && <p className="error">{errors.general}</p>}
       </form>
-    </section>
+    </div>
   );
 };

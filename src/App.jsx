@@ -6,7 +6,6 @@ import { ProductFormContainer } from "./components/adminComponents/ProductFormCo
 import { ProductSuccess } from "./components/adminComponents/ProductSuccess";
 import { PublicLayout } from "./layouts/PublicLayout";
 import { AdminLayout } from "./layouts/AdminLayout";
-import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Login } from "./components/Login/Login";
 
@@ -22,8 +21,7 @@ function App() {
         </Route>
         <Route path="/admin/login" element={<Login />} />
         <Route path="/admin" element={<ProtectedRoute><AdminLayout /></ProtectedRoute>}>
-          <Route index element={<Navigate to={"dashboard"} />} />
-          <Route path="dashboard" element={<Dashboard />}/> {/*si saco el dashboard, aca redirige al products/new */}
+          <Route index element={<Navigate to={"products/new"} />} />
           <Route path="products/new" element={<ProductFormContainer />} />
           <Route path="products/success/:id" element={<ProductSuccess />} />
         </Route>

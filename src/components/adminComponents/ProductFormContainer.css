@@ -1,0 +1,80 @@
+.form-container {
+  width: 40rem;
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  border-radius: 1rem;
+  background-color: bisque;
+}
+
+.botones-acciones {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.boton-volver {
+  text-decoration: none;
+  cursor: pointer;
+  color: brown;
+  font-weight: bold;
+}
+
+.boton-logout {
+  border: none;
+  background: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-family: Outfit, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: brown;
+}
+
+.form-producto {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-producto h2 {
+  margin: 1rem;
+}
+
+.form-producto div {
+  display: flex;
+  margin-top: 1rem;
+  padding: 0.2rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-producto input, textarea {
+  width: 100%;
+  border-radius: 0.2rem;
+  font-family: Outfit, sans-serif;
+  font-size: 1rem;
+  padding: 0.2rem;
+  border: none;
+}
+
+.form-producto input:focus, .form-producto textarea:focus {
+  background-color: whitesmoke;
+}
+
+.form-producto textarea {
+  resize: vertical;
+}
+
+.form-producto button {
+  margin-top: 2rem;
+}
+
+.error {
+  color: brown;
+  text-align: center;
+}

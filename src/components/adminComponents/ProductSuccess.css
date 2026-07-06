@@ -1,0 +1,22 @@
+.success-page {
+  width: 40rem;
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  border-radius: 1rem;
+  background-color: bisque;
+}
+
+.link-otro {
+  text-decoration: none;
+  color: brown;
+  font-size: 1.2rem;
+}
+
+.link-otro:hover {
+  font-weight: bold;
+}

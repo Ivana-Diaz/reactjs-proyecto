@@ -47,6 +47,7 @@ export const ProductFormContainer = () => {
 
       const productData = {
         ...product,
+        category: product.category.toLowerCase(),
         price: Number(product.price),
         image: imageUrl,
       };
@@ -55,7 +56,7 @@ export const ProductFormContainer = () => {
 
       setProduct({ name: "", price: "", category: "", description: "" });
       setFile(null);
-      navigate(`/success/${id}`, { replace: true });
+      navigate(`/admin/products/success/${id}`, { replace: true });
 
     } catch (err) {
       setErrors({ general: err.message });

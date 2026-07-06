@@ -11,7 +11,13 @@
 
 .link {
   text-decoration: none;
+  display: inline-block;
   color: white;
+}
+
+.link:hover {
+  color: bisque;
+  transform: scale(1.06);
 }
 
 .incart {

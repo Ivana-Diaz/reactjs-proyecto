@@ -18,17 +18,11 @@ export const ItemListContainer = () => {
       .finally(() => setLoading(false));
   }, [category]);
 
-  if (loading) return <p>Cargando...</p>;
+  if (loading) return <p className="cargando">Cargando...</p>;
 
   return (
-    <section>
+    <section className="seccion-productos">
       <h1>Algunos de nuestros productos</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta enim fuga temporibus ducimus 
-        explicabo laboriosam unde vitae quasi nam dolore voluptates ab nesciunt, 
-        alias eaque iste assumenda repellendus nihil deleniti aspernatur labore? 
-        Minus illo similique voluptatem provident labore nulla aperiam?
-      </p>
       <ItemList products={products} />
     </section>
   );
