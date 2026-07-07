@@ -43,8 +43,21 @@
   background-color: floralwhite;
   font-family: Outfit, sans-serif;
   font-size: 1rem;
+  transition-duration: 0.4s;
 }
 
 .boton-agregar:hover {
   background-color: darksalmon;
+}
+
+@media (max-width: 768px) {
+  .tarjeta-detail {
+    width: 60%;
+    flex-wrap: wrap;
+  }
+
+  .imagen-detail {
+    min-width: 20%;
+    height: fit-content;
+  }
 }

@@ -8,6 +8,7 @@ import { PublicLayout } from "./layouts/PublicLayout";
 import { AdminLayout } from "./layouts/AdminLayout";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Login } from "./components/Login/Login";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="products/success/:id" element={<ProductSuccess />} />
         </Route>
       </Routes>
+      <ToastContainer />
     </>
   );
 };

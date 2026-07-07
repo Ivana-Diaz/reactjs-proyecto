@@ -9,6 +9,15 @@ header {
 }
 
 .logo {
-  width: 6rem;
+  width: 5.4rem;
   margin: 0.6rem 1rem;
+}
+
+@media (max-width: 768px) {
+  header, ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
 }

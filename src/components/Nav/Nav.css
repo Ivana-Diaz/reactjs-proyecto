@@ -2,17 +2,20 @@
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-right: 1.4rem;
 }
+
 .nav-list li {
   font-size: 1.8rem;
-  margin: 1rem;
+  margin: 0.8rem;
 }
 
 .link {
   text-decoration: none;
   display: inline-block;
   color: white;
+  transition-duration: 0.4s;
 }
 
 .link:hover {
@@ -20,14 +23,18 @@
   transform: scale(1.06);
 }
 
+.cart {
+  width: 1.8rem;
+}
+
 .incart {
   border-radius: 50%;
   background-color: brown;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: bold;
-  padding: 0.8rem;
-  width: 25px;
-  height: 25px;
+  padding: 0.6rem;
+  width: 20px;
+  height: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;

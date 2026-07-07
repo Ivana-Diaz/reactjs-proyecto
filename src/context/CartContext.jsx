@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 const CartContext = createContext();
@@ -26,18 +27,18 @@ export const CartProvider = ({children}) => {
 
   const addItem = (item) => {
     if (isInCart(item)) {
-      alert("El producto ya existe en el carrito");
+      toast.warning("El producto ya existe en el carrito");
       return;
     }
 
     setCart([...cart, item]);
-    alert("Producto agregado al carrito");
+    toast.success("Producto agregado al carrito");
   };
 
   const removeItem = (id) => {
     const updatedCart = cart.filter(element => element.id !== id);
     setCart(updatedCart);
-    alert("Producto eliminado del carrito");
+    toast.warning("Producto eliminado del carrito");
   };
 
   const clearCart = () => {
@@ -53,7 +54,7 @@ export const CartProvider = ({children}) => {
   };
 
   const checkout = () => {
-    alert("Su compra ha sido realizada");
+    toast.success("Su compra ha sido realizada");
     clearCart();
     navigate("/");
   };

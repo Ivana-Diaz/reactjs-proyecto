@@ -2,6 +2,7 @@ import "./Login.css";
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const Login = () => {
   const { login } = useAuth();
@@ -22,7 +23,7 @@ export const Login = () => {
       navigate("/admin", { replace: true });
     } catch (error) {
       console.error(error);
-      alert("Error al iniciar sesión");
+      toast.error("Error al iniciar sesión");
     };
   };
 

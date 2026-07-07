@@ -1,4 +1,5 @@
 import "./Nav.css";
+import cart from "../../assets/cart.png";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
@@ -27,7 +28,7 @@ export const Nav = () => {
         </li>
         <li>
           <Link to={"/carrito"} className="link">
-            Carrito{totalItems > 0 && <span className="incart">{totalItems}</span>}
+            <img src={cart} className="cart"/> {totalItems > 0 && <span className="incart">{totalItems}</span>}
           </Link>
         </li>
       </ul>

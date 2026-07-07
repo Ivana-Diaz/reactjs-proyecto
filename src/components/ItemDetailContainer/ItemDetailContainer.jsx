@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Cargando...</p>;
+  if (loading) return <p className="cargando">Cargando...</p>;
   if (!itemDetail) return <p>Producto no encontrado.</p>;
 
   return (

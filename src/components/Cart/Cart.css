@@ -49,6 +49,7 @@
   font-family: Outfit, sans-serif;
   font-size: 1rem;
   width: 5rem;
+  transition-duration: 0.4s;
 }
 
 .boton-eliminar:hover, .boton-finalizar:hover {
@@ -85,10 +86,7 @@
   font-family: Outfit, sans-serif;
   font-size: 1rem;
   width: 10rem;
-}
-
-.boton-finalizar:hover {
-  font-weight: bold;
+  transition-duration: 0.4s;
 }
 
 .link-volver {
@@ -106,4 +104,11 @@
 .carrito-vacio {
   font-size: 1.4rem;
   margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .tarjeta-carrito, .resumen {
+    width: 60%;
+    min-width: 40%;
+  }
 }
